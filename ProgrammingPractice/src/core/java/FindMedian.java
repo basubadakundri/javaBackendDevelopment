@@ -9,7 +9,9 @@ public class FindMedian {
 				return v[(v.length / 2)];
 	        }
 	        else{
-	            return  (v[((v.length)/2)]+v[(((v.length)/2)-1)])/2;
+				int middle1 = v[((v.length) / 2)];
+				int middle2 = v[(((v.length) / 2) - 1)];
+				return (middle1 + middle2) / 2;
 	            
 	        }
 	    }
