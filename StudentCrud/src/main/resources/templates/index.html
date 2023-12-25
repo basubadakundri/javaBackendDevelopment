@@ -6,55 +6,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
     <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 </head>
-<body>
-<div>
-    <h2 >Spring Boot Crud System -Student Registation</h2>
-    <tr>
-        <div align = "left" >           
-             <h3><a  th:href="@{'/new'}">Add new</a></h3>     
+<body style="background-image: url('/images/bgimage.jpg');">
+    <div  class="p-3 mb-2 bg-light text-dark" >
+        <h2 class="p-3 mb-2 bg-info text-white">Spring Boot CRUD System - Student Registration</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="panel-body">
+                    <h3><a class="btn btn-primary" th:href="@{'/new'}">Add new</a></h3>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Course</th>
+                                <th>Fee</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="student : ${liststudent}">
+                                <td th:text="${student.id}">Student ID</td>
+                                <td th:text="${student.studentname}">Student Name</td>
+                                <td th:text="${student.course}">Course</td>
+                                <td th:text="${student.fee}">Fee</td>
+                                <td>
+                                    <a class="btn btn-warning" th:href="@{'/edit/' + ${student.id}}">Edit</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" th:href="@{'/delete/' + ${student.id}}">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    
-    </tr>
-    <tr>
-    
-    <div class="col-sm-5" align = "center">
-                 <div class="panel-body" align = "center" >
-                 <table class="table">
-  <thead class="thead-dark">
-    <tr>
-              <th>Student ID</th>
-            <th>Student Name</th>
-            <th>Course</th>
-            <th>Fee</th>
-            <th>Edit</th>
-            <th>Delete</th>
-       </tr>
-  </thead>
-  <tbody>
-      <tr  th:each="student : ${liststudent }">
-        <td th:text="${student.id}">Student ID</td>
-        <td th:text="${student.studentname}">StudentName</td>
-        <td th:text="${student.course}">Course</td>
-        <td th:text="${student.fee}">Fee</td>                
-        <td>
-            <a th:href="@{'/edit/' + ${student.id}}">Edit</a>
-        </td>                                
-        <td>
-            <a th:href="@{'/delete/' + ${student.id}}">Delete</a>
-        </td>            
-        </tr> 
-   
-  </tbody>
-</table>
-                    
-                 </div>
-
-            </div> 
-
-    </tr>
-
-    </tbody>
-    </table>
-    <div>
+    </div>
 </body>
+
 </html>
