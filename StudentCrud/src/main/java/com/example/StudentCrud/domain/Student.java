@@ -1,11 +1,12 @@
 package com.example.StudentCrud.domain;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@jakarta.persistence.Entity
+@Entity
 @Table
 public class Student {
 	@Id
