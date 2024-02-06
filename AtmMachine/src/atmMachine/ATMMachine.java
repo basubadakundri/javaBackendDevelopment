@@ -1,17 +1,22 @@
+package atmMachine;
 import java.util.Scanner;
 
 class ATM {
 	float balance;
 	int pin = 5467;
+	int accNum = 12345;
 
 	void main() {
-		System.out.println("Enter your pin");
+		System.out.println("Enter Account number: ");
 		Scanner sc = new Scanner(System.in);
+		int enteredAccNum = sc.nextInt();
+		System.out.println("Enter your pin");
 		int enteredpin = sc.nextInt();
-		if (enteredpin == pin) {
+
+		if (enteredpin == pin && enteredAccNum == accNum) {
 			menu();
 		} else {
-			System.out.println("Enter Valid Pin: ");
+			System.out.println("Enter Valid Pin or account number: ");
 		}
 	}
 

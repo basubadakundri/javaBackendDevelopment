@@ -6,13 +6,14 @@ public class SortChar {
 
 	public static void main(String[] args) {
 		String text = "basavaraj";
-		System.out.println(sort(text));
+		sort(text);
+
 	}
 
-	static public String sort(String text) {
+	static public void sort(String text) {
 		String sorted = text;
 		char[] arr = sorted.toCharArray();
 		Arrays.sort(arr);
-		return new String(arr);
+		System.out.println(String.valueOf(arr));
 	}
 }
