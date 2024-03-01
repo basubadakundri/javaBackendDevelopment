@@ -14,8 +14,7 @@ public class TestMain {
 		em.add(new Employee("E40005", "ram", "teamlead", 84));
 
 		HashMap<String, Integer> hm = new HashMap<>();
-		for (int i = 0; i < em.size(); i++) {
-			Employee emp = em.get(i);
+		for (Employee emp : em) {
 			if (hm.containsKey(emp.getName())) {
 				hm.put(emp.getName(), hm.get(emp.getName()) + 1);
 			} else {

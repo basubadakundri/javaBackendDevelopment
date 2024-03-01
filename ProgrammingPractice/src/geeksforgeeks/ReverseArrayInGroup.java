@@ -5,9 +5,9 @@ import java.util.Collections;
 import java.util.List;
 public class ReverseArrayInGroup {
 	public static void main(String[] args) {
-		
+
 	ArrayList<Integer> arr = new ArrayList<>(List.of(1, 2, 3, 4, 5));
-	
+
 	reverseInGroups(arr,arr.size(), 3);
 }
 

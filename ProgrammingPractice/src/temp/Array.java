@@ -18,6 +18,6 @@ public class Array {
 		for (long j : arr2) {
 			arrList.add(j);
         }
-        
+
     }
 }

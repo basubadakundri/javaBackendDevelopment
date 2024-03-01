@@ -15,8 +15,8 @@ public class MinDistBtnWord {
 		if (w1 == w2) {
 			return 0;
 		}
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == w1) {
+		for (String element : arr) {
+			if (element == w1) {
 
 			}
 		}

@@ -71,17 +71,11 @@ public class StudentInfoCollector {
 	private static boolean isEligible(Date dob, Date sslcPassedDate, Date pucPassedDate) {
 		// Age check
 		int age = calculateAge(dob);
-		if (age < 18 || age > 25) {
-			return false;
-		}
+		
 
 		// SSLC/SSC passed date check
-		if (!isDateInRange(sslcPassedDate, 1, 5)) {
-			return false;
-		}
-
 		// PUC/12th passed date check
-		if (!isDateInRange(pucPassedDate, -1, 0)) {
+		if (age < 18 || age > 25 || !isDateInRange(sslcPassedDate, 1, 5) || !isDateInRange(pucPassedDate, -1, 0)) {
 			return false;
 		}
 

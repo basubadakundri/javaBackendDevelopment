@@ -31,7 +31,7 @@ public class CompairTwoArray {
 				}
 			}
 		}
-		if (status == true) {
+		if (status) {
 			System.out.println("Both arrays are same");
 		} else {
 			System.out.println("Both arrays are not same");

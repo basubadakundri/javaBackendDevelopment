@@ -17,12 +17,8 @@ public class EmailValidation {
 
 	private static boolean isValidEmail(String email) {
 		// Check if the email is not null and not empty
-		if (email == null || email.isEmpty()) {
-			return false;
-		}
-
 		// Check if the email contains "@" and "."
-		if (!email.contains("@") || !email.contains(".")) {
+		if (email == null || email.isEmpty() || !email.contains("@") || !email.contains(".")) {
 			return false;
 		}
 

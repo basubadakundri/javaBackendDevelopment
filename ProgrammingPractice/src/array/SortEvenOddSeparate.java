@@ -6,14 +6,14 @@ public class SortEvenOddSeparate {
 	public static void main(String[] args) {
 		int[] arr = { 1, 2, 5, 3, 7, 8, 11, 20 };
 		List<Integer> list = new ArrayList<>();
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] % 2 == 0) {
-				list.add(arr[i]);
+		for (int element : arr) {
+			if (element % 2 == 0) {
+				list.add(element);
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] % 2 != 0) {
-				list.add(arr[i]);
+		for (int element : arr) {
+			if (element % 2 != 0) {
+				list.add(element);
 			}
 		}
 		System.out.println("The new sorted array is: ");

@@ -9,8 +9,8 @@ public class StartAndEndIndex {
 		System.out.println(Arrays.toString(findIndex(a, 6, 5)));
 	}
 
-	static int[] findIndex(int a[], int N, int key) 
-    { 
+	static int[] findIndex(int a[], int N, int key)
+    {
 		int[] ans = { -1, -1 };
 		for (int i = 0; i < N; i++) {
 			if (a[i] == key) {

@@ -1,8 +1,6 @@
 package interview.question2;
 
 import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 public class SecondLargestNumberInArray {
 
@@ -12,14 +10,20 @@ public class SecondLargestNumberInArray {
 	}
 
 	private static void findSecondLargeNum(int[] nums) {
-		Set<Integer> newArray = new LinkedHashSet<>();
-		Arrays.sort(nums);
-		int[] arr2 = new[] int(4);
-		for (int num : nums) {
-			newArray.add(num);
+		if (nums.length <= 2) {
+			throw new IllegalArgumentException();
 		}
-		newArray.stream().forEach(n );
-		System.out.println("The Second Largest number in Array is: " + newArray);
+		Arrays.sort(nums);
+		int lar = nums[1];
+		int secLarg = nums[0];
+		for (int i = 2; i < nums.length; i++) {
+			if (nums[i] > lar) {
+				secLarg = lar;
+				lar = nums[i];
+			}
+		}
+		System.out.println("the second largest number is: " + secLarg);
+
 	}
 
 }

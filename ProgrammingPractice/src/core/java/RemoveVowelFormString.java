@@ -9,14 +9,14 @@ public class RemoveVowelFormString {
 	   static String removeVowels(String S) {
 	        String newS="";
 	        for(int i=0; i<S.length(); i++){
-	          if(checkVowel(S.charAt(i))== false){
+	          if(!checkVowel(S.charAt(i))){
 	              newS= newS+S.charAt(i);
-	          }  
+	          }
 	        }
 	        return newS;
-	        
+
 	    }
-	    
+
 	    static boolean checkVowel(char c){
 	        if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'){
 	            return true;

@@ -3,9 +3,9 @@ package prepinsta.com;
 import java.util.Arrays;
 
 public class CheckIfTwoStringsAreAnagramAreNot {
-   
+
 	public static boolean check(String s1 , String s2) {
-		
+
 		if(s1.length()==s2.length()) {
 		char[] str1 = s1.toCharArray();
 		char[] str2 = s2.toCharArray();
@@ -16,7 +16,7 @@ public class CheckIfTwoStringsAreAnagramAreNot {
         }
         else return false;
 		}
-		else return false;	
+		else return false;
 	}
 
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package geeksforgeeks;
 
-// Convert List of Character into String 
+// Convert List of Character into String
 public class CharArryToString {
 	public static void main(String[] args) {
 	   char[] arr = {'g', 'e', 'e', 'k', 's', 'f', 'o', 'r', 'g', 'e', 'e', 'k', 's'};

@@ -8,8 +8,8 @@ public class CheckForBinary {
 
 	static boolean isBinary(String str) {
 		char[] arry = str.toCharArray();
-		for (int i = 0; i < arry.length; i++) {
-			if (arry[i] != '0' && arry[i] != '1') {
+		for (char element : arry) {
+			if (element != '0' && element != '1') {
 				return false;
 			}
 

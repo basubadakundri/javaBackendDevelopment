@@ -24,6 +24,6 @@ public class FrequencyOfCharactersInAString {
 				System.out.println(charray[i] + " : " + freq[i]);
 			}
 		}
-	
+
 	}
 }

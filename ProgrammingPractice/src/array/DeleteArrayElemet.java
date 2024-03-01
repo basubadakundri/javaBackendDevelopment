@@ -11,9 +11,9 @@ public class DeleteArrayElemet {
 	public static int[] result(int[] arr, int n) {
 		int[] newArr = new int[arr.length - 1];
 		int index = 0;
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] != n) {
-				newArr[index] = arr[i];
+		for (int element : arr) {
+			if (element != n) {
+				newArr[index] = element;
 				index++;
 			}
 		}

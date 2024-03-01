@@ -11,12 +11,12 @@ public class Test {
 	static int[] count(String s) {
 		int[] arr = new int[4];
 		char[] ch = s.toCharArray();
-		for (int i = 0; i < ch.length; i++) {
-			if (Character.isUpperCase(ch[i])) {
+		for (char element : ch) {
+			if (Character.isUpperCase(element)) {
 				arr[0] += 1;
-			} else if (Character.isLowerCase(ch[i])) {
+			} else if (Character.isLowerCase(element)) {
 				arr[1] += 1;
-			} else if (Character.isDigit(ch[i])) {
+			} else if (Character.isDigit(element)) {
 				arr[2] += 1;
 			} else {
 				arr[3] += 1;

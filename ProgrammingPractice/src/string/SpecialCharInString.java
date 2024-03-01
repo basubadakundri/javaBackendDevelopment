@@ -11,9 +11,9 @@ public class SpecialCharInString {
 	private static void removeSpecialChar(String str) {
 		char[] ch = str.toCharArray();
 		String newStr = "";
-		for (int i = 0; i < ch.length; i++) {
-			if (Character.isDigit(0) || Character.isLetter(ch[i]) || Character.isWhitespace(ch[i])) {
-				newStr = newStr + ch[i];
+		for (char element : ch) {
+			if (Character.isDigit(0) || Character.isLetter(element) || Character.isWhitespace(element)) {
+				newStr = newStr + element;
 			}
 		}
 		System.out.println("String Without Special Character: " + newStr);
@@ -22,9 +22,9 @@ public class SpecialCharInString {
 	private static void findSpecialChar(String str) {
 		char[] ch = str.toCharArray();
 		String newStr = "";
-		for (int i = 0; i < ch.length; i++) {
-			if (!Character.isDigit(0) && !Character.isLetter(ch[i]) && !Character.isWhitespace(ch[i])) {
-				newStr = newStr + ch[i];
+		for (char element : ch) {
+			if (!Character.isDigit(0) && !Character.isLetter(element) && !Character.isWhitespace(element)) {
+				newStr = newStr + element;
 			}
 		}
 		System.out.println(newStr);

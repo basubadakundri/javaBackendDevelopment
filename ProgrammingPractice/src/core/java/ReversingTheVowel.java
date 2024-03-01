@@ -11,7 +11,7 @@ public class ReversingTheVowel {
     {
        String str = "";
        for(int i=0; i<s.length(); i++){
-           if(isVowel(s.charAt(i))==true){
+           if(isVowel(s.charAt(i))){
 				str = str + s.charAt(i);
            }
        }

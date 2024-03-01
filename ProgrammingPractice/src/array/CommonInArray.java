@@ -15,12 +15,12 @@ public class CommonInArray {
 	static void check(int[] array1, int[] array2) {
 		Set<Integer> arrSet = new HashSet<>();
 
-		for (int i = 0; i < array1.length; i++) {
-			arrSet.add(array1[i]);
+		for (int element : array1) {
+			arrSet.add(element);
 		}
-		for (int j = 0; j < array2.length; j++) {
-			if (arrSet.contains(array2[j])) {
-				System.out.print(array2[j] + " ");
+		for (int element : array2) {
+			if (arrSet.contains(element)) {
+				System.out.print(element + " ");
 			}
 
 		}
@@ -31,15 +31,15 @@ public class CommonInArray {
 	static String checkUnion(int[] array1, int[] array2) {
 		Set<Integer> arrSet = new HashSet<>();
 
-		for (int i = 0; i < array1.length; i++) {
-			arrSet.add(array1[i]);
+		for (int element : array1) {
+			arrSet.add(element);
 		}
-		for (int j = 0; j < array2.length; j++) {
-			if (arrSet.contains(array2[j])) {
-				arrSet.remove(array2[j]);
+		for (int element : array2) {
+			if (arrSet.contains(element)) {
+				arrSet.remove(element);
 			}
 			else {
-				arrSet.add(array2[j]);
+				arrSet.add(element);
 			}
 
 		}

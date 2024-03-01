@@ -15,6 +15,7 @@ class BaseClass {
 }
 
 class DerivedClass extends BaseClass {
+	@Override
 	protected void foo() {
 		System.out.println("Deriveded foo");
 	}

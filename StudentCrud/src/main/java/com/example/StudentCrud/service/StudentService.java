@@ -2,7 +2,6 @@ package com.example.StudentCrud.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.StudentCrud.domain.Student;
@@ -11,23 +10,26 @@ import com.example.StudentCrud.repository.StudentRepository;
 @Service
 public class StudentService {
 
-	@Autowired
-	private StudentRepository repo;
+	private StudentRepository studentRepo;
+
+	public StudentService(StudentRepository studentRepo) {
+		this.studentRepo = studentRepo;
+	}
 
 	public List<Student> listAll() {
-		return repo.findAll();
+		return studentRepo.findAll();
 	}
 
 	public void save(Student std) {
-		repo.save(std);
+		studentRepo.save(std);
 	}
 
 	public Student get(long id) {
-		return repo.findById(id).get();
+		return studentRepo.findById(id).get();
 	}
 
 	public void delete(long id) {
-		repo.deleteById(id);
+		studentRepo.deleteById(id);
 	}
 
 }

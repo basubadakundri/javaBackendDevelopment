@@ -8,9 +8,9 @@ public class FindElemStarEndSameLatters {
 	}
 
 	public static void searchElem(String[] st) {
-		for (int i = 0; i < st.length; i++) {
-			if (check(st[i])) {
-				System.out.println(st[i]);
+		for (String element : st) {
+			if (check(element)) {
+				System.out.println(element);
 			}
 
 		}

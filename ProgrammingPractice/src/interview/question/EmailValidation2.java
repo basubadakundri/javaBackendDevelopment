@@ -10,10 +10,7 @@ public class EmailValidation2 {
 
 	static boolean check(String str) {
 
-		if (!str.contains("@") || !str.contains(".")) {
-			return false;
-		}
-		if (str.charAt(0) == '@') {
+		if (!str.contains("@") || !str.contains(".") || (str.charAt(0) == '@')) {
 			return false;
 		}
 		return true;
